@@ -6,6 +6,7 @@ description: A great description for my super website.
 robots: index, follow
 
 ---
+{% from "node_modules/@id-sk/frontend/idsk/components/header-extended/macro.njk" import idskHeaderExtended %}
 
 <!doctype html>
 <html lang="en">
@@ -13,6 +14,9 @@ robots: index, follow
   {% include 'head.njk' %}
 
   <body>
+    {{ idskHeaderExtended({
+      "classes": "idsk-header-extended--shrink"
+    }) }}
 
     {{ content | safe }}
 

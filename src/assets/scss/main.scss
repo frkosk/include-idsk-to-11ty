@@ -1,13 +1,1 @@
-// Sanitize CSS
-@import '~sanitize.css/sanitize';
-@import '~sanitize.css/typography';
-@import '~sanitize.css/assets';
-@import '~sanitize.css/reduce-motion';
-
-// Custom Files
-@import '01-tools/**/*';
-@import '02-settings/**/*';
-@import '03-objects/**/*';
-@import '04-components/**/*';
-@import '05-layouts/**/*';
-@import '06-utilities/**/*';
+@import '/node_modules/@id-sk/frontend/idsk/all.scss';

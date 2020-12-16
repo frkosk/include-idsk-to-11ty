@@ -53,7 +53,9 @@ const addToEntries = folder => {
 
 const images = addToEntries('./src/assets/images/content/')
 addToEntries('./src/assets/images/other/')
-addToEntries('./src/assets/videos/')
+addToEntries('./node_modules/@id-sk/frontend/idsk/assets/')
+addToEntries('./node_modules/@id-sk/frontend/govuk/assets/')
+
 
 const isProd = APP_ENV === 'production'
 
@@ -155,6 +157,9 @@ const config = {
           use: [
             MiniCSSExtractPlugin.loader,
             'css-loader',
+            {
+              loader: 'resolve-url-loader'
+            },
             {
               loader: 'postcss-loader',
               options: {
